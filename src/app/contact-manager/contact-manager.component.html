@@ -1,0 +1,77 @@
+<!-- system date and time -->
+<p>Login Date:{{loginDate| date:'medium'}}</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center text-warning">contact management service</h1>
+            <p class="text-align:justify ">Contact management services are software solutions that allow individuals or businesses to store, organize, and manage their contacts in one central location. These services often include features such as contact categorization, searching, and filtering, as well as the ability to import and export contact data from other applications or devices.
+
+                One of the key benefits of contact management services is that they can help streamline communication and collaboration between team members, as well as improve customer relationship management. By having all contact information in one place, teams can easily access and update customer information, reducing the risk of miscommunication or duplicate efforts.
+                
+                Another advantage of contact management services is that they can help improve productivity and efficiency by automating certain tasks, such as sending follow-up emails or scheduling appointments. This can save time and allow team members to focus on more strategic activities.</p>
+                <a routerLink="/contact/add" class="btn btn-warning" style="float: right;"><i class="fa-solid fa-user"></i>add contact</a>
+
+        </div>
+    </div>
+    <!-- ....search bar and button -->
+    <div class="row">
+        <div class="col-6">
+        <input (change)="search($event)" class="form-control" style="width: 400px;" type="text" name="" id="" placeholder="search your contact" >
+        </div>
+        <div class="col-6">
+
+        </div>
+    </div>
+
+<!----------------- pre tag ------------------------->
+        <!-- <pre>
+            {{heading}}
+        </pre>
+    <pre>
+        {{allContacts | json}}
+    </pre> -->
+
+
+    <!-- card design -->
+    <div class="container m-5">
+        <div class="row">
+
+            <div class="col-md-6" *ngFor="let contact of allContacts | filter:searchkey: 'name' ">
+
+            <div class="card ">
+                <div class="card-body bg-dark p-5 border rounded rounded-3 ">
+                    <div class="row">
+                        <div class="col-4">
+                            <!-- property binding -->
+
+                            <img  [src]="contact.photo" width="100px" height="150px"  alt="">
+
+
+                        </div>
+                        <div class="col-8">
+                            <ul class="list-group">
+                                <li class="list-group-item"> Name:{{contact.name}}
+                                    <!-- view -->
+                                    <a routerLink="/contact/view/{{contact.id}}" class="me-3 " style="float: right;"><i class="fa-solid fa-eye text-warning"></i></a>
+                                </li>
+                                <li class="list-group-item">Email:{{contact.email}}
+                                    <a routerLink="/contact/update/{{contact.id}}" class="me-3" style="float: right;"><i class="fa-sharp fa-regular fa-pen-to-square text-success"></i></a>
+                                </li>
+                                <li class="list-group-item">Mobile no:{{contact.phone}}
+                                    <!-- delete -->
+                                    <button (click)="deleteContact(contact.id)" class="me-3 btn btn-light" style="float: right;"><i class="fa-solid fa-trash text-danger me-2~"></i></button>
+                                  
+                                </li>
+                            
+                                  </ul>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

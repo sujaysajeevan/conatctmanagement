@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center text-warning">ADD YOUR CONTACT</h1>
+            <p class="text-align:justify ">Contact management services are software solutions that allow individuals or businesses to store, organize, and manage their contacts in one central location. These services often include features such as contact categorization, searching, and filtering, as well as the ability to import and export contact data from other applications or devices.
+
+                One of the key benefits of contact management services is that they can help streamline communication and collaboration between team members, as well as improve customer relationship management. By having all contact information in one place, teams can easily access and update customer information, reducing the risk of miscommunication or duplicate efforts.
+                
+                Another advantage of contact management services is that they can help improve productivity and efficiency by automating certain tasks, such as sending follow-up emails or scheduling appointments. This can save time and allow team members to focus on more strategic activities.</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <!-- <pre>
+            {{contactId}}
+        </pre>
+        <pre>
+            {{contactName}}
+        </pre> -->
+        <!-- <pre>
+            {{contact | json}}
+        </pre> -->
+        <div class="col-6 ">
+           <form class="m-1">
+
+            <div class="form border border-3 p-5">
+            <input [(ngModel)]= "contact.id"   name="contactId" class="form-control"  placeholder="Enter contact id:" type="text"  id="">
+            <input [(ngModel)]= "contact.name" name="contactName" class="form-control"  placeholder="Enter contact Name:" type="text"  id="">
+            <input [(ngModel)]= "contact.email" name="contactEmail" class="form-control"  placeholder="Enter contact email:" type="text"  id="">
+            <input [(ngModel)]= "contact.phone" name="contactPhone" class="form-control"  placeholder="Enter phone:" type="text"  id="">
+            <input [(ngModel)]= "contact.photo" name="contactPhoto" class="form-control"  placeholder="Enter contact photo url:" type="text"  id="">
+            <input [(ngModel)]= "contact.company" name="contactCompany" class="form-control"  placeholder="Enter Company Name:" type="text"  id="">
+            <input [(ngModel)]= "contact.title" name="contactTitle" class="form-control"  placeholder="Enter Company title:" type="text"  id="">
+
+            <select [(ngModel)]= "contact.groupId" name="groupId" class="form-control" id="">
+
+                    <option value=""selected hidden disabled>select</option>
+                    <option value={{group.id}} *ngFor="let group of allGroups">{{group.name}}</option>
+                   
+            </select>
+            <input (click)="addContact()" type="button" name="" id="" class="btn btn-success mt-2 " style="float: right;" value="create">
+            <a  routerLink="/"  class="btn btn-danger">close</a>
+
+
+     </div>
+    </form>
+    </div>
+    <div class="col-6">
+        <img [src]= "contact.photo" style="height: 500px;" alt="">
+    </div>
+    </div>
+</div>

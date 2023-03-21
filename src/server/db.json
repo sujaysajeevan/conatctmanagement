@@ -1,0 +1,72 @@
+{
+  "conatcts": [
+    {
+      "id": 3,
+      "name": "rashid ff",
+      "email": "rashid@gmail.com",
+      "phone": "7765490084",
+      "photo": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60",
+      "company": "sotherland",
+      "title": "assi.manager",
+      "groupId": "3"
+    },
+    {
+      "id": 4,
+      "name": "saju",
+      "email": "saju@gmail.com",
+      "phone": "8784451120",
+      "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60",
+      "company": "conduvent",
+      "title": "traini",
+      "groupId": "4"
+    },
+    {
+      "id": "10",
+      "name": "ravi",
+      "email": "ravifrmf",
+      "phone": "4r44",
+      "photo": "https://static.vecteezy.com/system/resources/previews/008/442/086/original/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg",
+      "company": "wipro",
+      "title": "manager",
+      "groupId": "1"
+    },
+    {
+      "id": "5",
+      "name": "amal",
+      "email": "amal@aaa",
+      "phone": "222",
+      "photo": "https://static.vecteezy.com/system/resources/previews/008/442/086/original/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg",
+      "company": "wipro",
+      "title": "manager",
+      "groupId": "2"
+    },
+    {
+      "id": "13",
+      "name": "ammu",
+      "email": "ammu@gmail",
+      "phone": "22222",
+      "photo": "222",
+      "company": "33",
+      "title": "dd",
+      "groupId": "3"
+    }
+  ],
+  "group": [
+    {
+      "id": "1",
+      "name": "family"
+    },
+    {
+      "id": "2",
+      "name": "friends"
+    },
+    {
+      "id": "3",
+      "name": "company"
+    },
+    {
+      "id": "4",
+      "name": "classmate"
+    }
+  ]
+}

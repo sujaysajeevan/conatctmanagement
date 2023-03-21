@@ -1,0 +1,137 @@
+
+    Basic commands
+
+    1 Create a new project - ng new contact_app
+    2 To run a project - ng serve --open
+    3 Create a new component - ng g c component_name
+    4 create a service - ng g s service_name
+    5 create pipe- ng g p pipe_folder/pipename
+------------------------------------------------------------------------------------------------------------------------ 
+
+    Basic Building Blocks
+
+    1 Module - Used to add 3rd party libraries
+    2 component - To create html pages(html,css,ts)
+    3 Selector - Used to replace the html corresponding to the component
+    4 services - resuable codes that can be share between components
+    5 asyncronous function rxjs
+    6 Dependency injection - data share between two dependent classes
+
+------------------------------------------------------------------------------------------------------------------------
+                                contact management system
+
+     1 create a new project - ng new contact_app
+     2 cd contact_app
+     3 code .
+     4 To run a project - ng serve --open
+     5 Install bootstrap,fontawesome and google fontawesome
+        -> npm i bootstrap
+        -> npm i @fontawesome/fontawesome-free  
+     6 config bootstrap, fontawesome and google fontawesome in Angular.json
+
+    7 create components
+        .contact manager- to view all contact and manager
+        ng g c contactmanager
+        addcontact- to add new contact
+        ng g c addContact
+
+        .updatecontact- to update contact
+        ng g c updateContact
+        .viewcontact- to view all contact
+        ng g c viewContact
+        -page not found login page
+        -navigation bar design ng g c navbar
+        -contact manager page design
+        -view page design
+        -update page design
+        -add page design
+
+     8 api creation   
+        create ower own json file
+        go to jsonplceholder site-create my json server
+
+     9 create folder for backend
+        create server folder inside the project - src/server folder
+        create db.json file in thr server folder
+        add our own contact to the json file 
+
+     10 inserver folder create package,json and node modules
+        create package.json file - npm  init 
+        create json server - npm i json-server
+        npm start
+
+        update package.json file script as
+          "scripts": {
+    "start": "json-server --watch db.json --port 3000"
+  },
+      npm start
+
+   11 create model for contact and group
+      crater model folder in src folder
+      create my contact.ts file
+      create my group.ts file
+
+    12 fetch data-asyncronous resolving
+        js                          TS
+        promise           =       observable
+        fetch('url')      =         rxjs library
+        .then()           =         .subscribe()
+
+   13 create api 
+   eg:view contact
+      update component
+
+   14 service creation
+      pass data from one component from another
+      if components are same data then we create service
+
+      ng g s service/api
+
+   15 to get http methords-get,post,put,patch,delete
+      import Httpclientmodule in app.module.js
+
+   16 Dependency inject httpclient in api services 
+
+   17 data binding
+         data sharing inside a component
+
+
+         html(view)->ts(component)
+         ts->html
+    1)one way data binding
+         a)component to view (ts->html)
+               i)string interpolation - {{variable-name}}  
+               ii)property binding -[attribute]="property-name" 
+
+         b)view(html) to component(ts)   
+               i)Event binding - (event="function_name)    
+               ii)event binding using $event - (event)="function_name($event)" 
+
+    2)two way data binding
+               i)ngModel
+                  -import formsModule in app module
+                  -[(ngModel)]="property_name"    forms moduleis needed       
+
+18 directives - to manipulate DOM content
+
+         1)component directives
+         2)structural directives - to add or remove html elments based some condition
+
+                  i)*ngIf = "condition"
+                  ii)*ngFor = "let i of array name"
+
+19 activated routing ..............fill
+
+20 angular pipes:Angular provides built-in pipes for typical data transformations, including transformations for internationalization (i18n), which use locale information to format data. The following are commonly used built-in pipes for data formatting:
+
+   eg:date
+
+   create a pipe for searching
+
+   ng g p pipe_folder/pipe_name
+
+   ng g p pipes/filter
+
+ 21 add contact,delete contact,update contact  
+
+

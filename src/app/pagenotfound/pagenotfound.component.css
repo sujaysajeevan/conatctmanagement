@@ -1,0 +1,16 @@
+.head{
+    font-size: 70px;
+    color: blueviolet;
+   
+}
+.head:hover{
+    transition: 2s;
+     /* transform: scale(1.2); */
+     color: red;
+    transform: rotate(30deg);
+}
+img{
+    box-shadow: 5px 5px 50px rgb(35, 32, 32);
+    height: 500px;
+
+}
